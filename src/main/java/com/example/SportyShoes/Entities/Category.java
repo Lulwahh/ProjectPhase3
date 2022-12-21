@@ -7,7 +7,7 @@ import jakarta.persistence.ManyToOne;
 @Entity
 public class Category {
     @Id
-    int cid;
+    Integer cid;
     String name;
 
     public Category() {

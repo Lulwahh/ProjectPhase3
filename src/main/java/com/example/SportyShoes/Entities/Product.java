@@ -9,7 +9,7 @@ public class Product {
     int id;
     String brand;
     @ManyToOne
-    private Category category;
+    private Category cid;
 
     public Product() {
     }
@@ -18,7 +18,7 @@ public class Product {
         this.id = id;
         this.brand = brand;
 
-        this.category = new Category(catID," ");
+        this.cid = new Category(catID," ");
     }
 
     @Override
@@ -26,7 +26,7 @@ public class Product {
         return "Product{" +
                 "id=" + id +
                 ", brand='" + brand + '\'' +
-                ", category=" + category +
+                ", category=" + cid +
                 '}';
     }
 
@@ -47,10 +47,11 @@ public class Product {
     }
 
     public Category getCategory() {
-        return category;
+        return cid;
     }
 
     public void setCategory(Category category) {
-        this.category = category;
+        this.cid
+                = category;
     }
 }

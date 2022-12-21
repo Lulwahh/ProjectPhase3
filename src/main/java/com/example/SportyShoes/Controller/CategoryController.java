@@ -12,7 +12,8 @@ public class CategoryController {
     CategoryService service;
     @RequestMapping("/categories")
     public Iterable<Category> getAllCategories() {
-
         return service.getAllCategories();
     }
+
+
 }
